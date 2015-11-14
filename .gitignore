@@ -1,0 +1,3 @@
+*.pyc
+
+personal_site/local_settings.py
