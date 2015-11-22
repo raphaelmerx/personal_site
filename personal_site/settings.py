@@ -223,6 +223,7 @@ INSTALLED_APPS = (
     "mezzanine.forms",
     "mezzanine.galleries",
     "mezzanine.twitter",
+    "mezzanine_pagedown",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
 )
@@ -321,3 +322,13 @@ except ImportError:
     pass
 else:
     set_dynamic_settings(globals())
+
+####################
+# PAGEDOWN SETTINGS #
+####################
+
+RICHTEXT_WIDGET_CLASS = 'mezzanine_pagedown.widgets.PageDownWidget'
+RICHTEXT_FILTERS = ('mezzanine_pagedown.filters.custom',)
+PAGEDOWN_MARKDOWN_EXTENSIONS = ('extra','codehilite', 'toc')
+# disable Mezzanine html sanitizing so that it does not interfere with md >
+RICHTEXT_FILTER_LEVEL = 3
