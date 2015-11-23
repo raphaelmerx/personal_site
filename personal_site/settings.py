@@ -83,6 +83,9 @@ from django.utils.translation import ugettext_lazy as _
 # INSTALLED_APPS setting.
 USE_MODELTRANSLATION = False
 
+COMMENTS_USE_RATINGS = False
+
+COMMENTS_DEFAULT_APPROVED = False
 
 ########################
 # MAIN DJANGO SETTINGS #
